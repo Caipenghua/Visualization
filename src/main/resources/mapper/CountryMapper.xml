@@ -11,4 +11,8 @@
 select MAX(date) from country
 )
     </select>
+    <select id="getMap" resultType="MapChart">
+       SELECT DISTINCT provinceName,province_confirm FROM province
+GROUP BY provinceName
+    </select>
 </mapper>

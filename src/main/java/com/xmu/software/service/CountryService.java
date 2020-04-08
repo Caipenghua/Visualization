@@ -1,6 +1,7 @@
 package com.xmu.software.service;
 
 import com.xmu.software.domain.Country;
+import com.xmu.software.domain.MapChart;
 import com.xmu.software.mapper.CountryMapper;
 import com.xmu.software.pojo.DeadCureTrend;
 import com.xmu.software.pojo.InfoCard;
@@ -77,5 +78,10 @@ public class CountryService {
         deadCureTrend.setDeadNum(deadNum);
         deadCureTrend.setCureNum(cureNum);
         return deadCureTrend;
+    }
+
+    public List<MapChart> getMapChartInChinaAll(){
+        List<MapChart> list=countryMapper.getMap();
+        return list;
     }
 }

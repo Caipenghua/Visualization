@@ -1,8 +1,8 @@
 package com.xmu.software.controller;
 
+import com.xmu.software.domain.MapChart;
 import com.xmu.software.pojo.DeadCureTrend;
 import com.xmu.software.pojo.InfoCard;
-import com.xmu.software.pojo.MapChart;
 import com.xmu.software.pojo.Trend;
 import com.xmu.software.service.CountryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class CountryController {
      */
     @GetMapping("/mapChartInChinaAll")
     public List<MapChart> getMapChartInChinaAll(){
-        return  null;
+        return  countryService.getMapChartInChinaAll();
     }
 
     /**
